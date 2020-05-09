@@ -16,28 +16,34 @@ header {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 2rem 3rem;
-    height: 10rem;
+    padding: 1rem 3rem;
+    height: auto;
     width: auto;
     background-color: rgb(39, 131, 236);
 }
 header h1{
-    font-size: 5rem;
+    font-size: 7rem;
     font-family: 'Varela round', sans-serif;
     color: whitesmoke;
 }
 
 #books{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(20rem, 1fr));
+    margin: 3rem 3rem;
    
 }
 
 .book{
     height: 20rem;
-    margin: 3rem 3rem;
-    padding: 1rem;
+    margin: 3rem 2rem;
+    padding: 2rem;
     background-color: rgb(10, 59, 59);
     border-radius: 10px;
+}
+.book{
+    font-size: 1.8rem;
+    font-family: 'Loto', sans-serif;
+    color: rgb(247, 225, 225);
 
 }
