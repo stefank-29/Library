@@ -1,0 +1,43 @@
+html {
+    font-size: 10px;
+    background-image: url("/images/biblioteka.jpg");
+    background-repeat: cover;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100vh;
+    
+}
+
+header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 2rem 3rem;
+    height: 10rem;
+    width: auto;
+    background-color: rgb(39, 131, 236);
+}
+header h1{
+    font-size: 5rem;
+    font-family: 'Varela round', sans-serif;
+    color: whitesmoke;
+}
+
+#books{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+   
+}
+
+.book{
+    height: 20rem;
+    margin: 3rem 3rem;
+    padding: 1rem;
+    background-color: rgb(10, 59, 59);
+    border-radius: 10px;
+
+}
