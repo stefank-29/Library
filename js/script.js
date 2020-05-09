@@ -21,8 +21,20 @@ addBookToLibrary(theHobbit);
 addBookToLibrary(theHobbit2);
 addBookToLibrary(theHobbit3);
 addBookToLibrary(anaKarenjina);
-
+addBookToLibrary(theHobbit);
+addBookToLibrary(theHobbit2);
+addBookToLibrary(theHobbit3);
+addBookToLibrary(anaKarenjina);
+render();
 //console.table(myLibrary);
+
+
+/*
+    TODO 1) new book button 
+    TODO 2) modal popup window
+    TODO 3) sacuvati podatke iz forme u objekat
+    TODO 4) filter za sortiranje 
+*/
 
 function addBookToLibrary(book){
     myLibrary.push(book);
@@ -53,14 +65,13 @@ function render(){
         pages.textContent = `Pages: ${book.pages}`;
         const read = document.createElement('p');
         read.classList.add("read");
-        read.textContent = `Read: ${read ? "Yes" : "Not already read"}`;
+        read.textContent = `Read: ${book.read ? "Yes" : "Not read yet"}`;
         
         card.appendChild(title);
         card.appendChild(author);
         card.appendChild(pages);
         card.appendChild(read);
-        booksGrid.appendChild(card);
-        
+        booksGrid.appendChild(card);   
     });
-
+    
 }

@@ -19,7 +19,7 @@ header {
     padding: 1rem 3rem;
     height: auto;
     width: auto;
-    background-color: rgb(39, 131, 236);
+    background-color: rgba(39, 131, 236, 0.4);
 }
 header h1{
     font-size: 7rem;
@@ -35,7 +35,7 @@ header h1{
 }
 
 .book{
-    height: 20rem;
+    height: 15remrem;
     margin: 3rem 2rem;
     padding: 2rem;
     background-color: rgb(10, 59, 59);
