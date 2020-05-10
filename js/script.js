@@ -1,6 +1,8 @@
 let myLibrary = [];
 const booksGrid = document.querySelector("#books");
-
+const newBook = document.querySelector("#newBook");
+const popup = document.querySelector(".bg-modal");
+const close = document.querySelector(".close");
 
 function Book(title, author, pages, read){
     this.title = title;
@@ -22,20 +24,29 @@ addBookToLibrary(theHobbit2);
 addBookToLibrary(theHobbit3);
 addBookToLibrary(anaKarenjina);
 addBookToLibrary(theHobbit);
-addBookToLibrary(theHobbit2);
-addBookToLibrary(theHobbit3);
 addBookToLibrary(anaKarenjina);
 render();
 //console.table(myLibrary);
 
 
 /*
-    TODO 1) new book button 
     TODO 2) modal popup window
     TODO 3) sacuvati podatke iz forme u objekat
-    TODO 4) filter za sortiranje 
+    TODO 4) kantica za brisanje knjiga
+    TODO 5) button za selektovanje dal je knjiga procitana
+    TODO * filter za sortiranje po parametrima
 */
     
+newBook.addEventListener('click', showPopup);
+close.addEventListener('click', closePopup)
+
+function showPopup(){
+    popup.style.display = "flex";
+}
+function closePopup(){
+    popup.style.display = "none";
+}
+
 function addBookToLibrary(book){
     myLibrary.push(book);
 }
