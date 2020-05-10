@@ -1,6 +1,6 @@
 html {
     font-size: 10px;
-    background-image: url("/images/biblioteka.jpg");
+    background-image: url("../images/biblioteka.jpg");
     background-repeat: cover;
     box-sizing: border-box;
 }
