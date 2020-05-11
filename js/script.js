@@ -34,6 +34,7 @@ render();
     TODO 3) sacuvati podatke iz forme u objekat
     TODO 4) kantica za brisanje knjiga
     TODO 5) button za selektovanje dal je knjiga procitana
+    TODO 6) local storage cuvanje podataka
     TODO * filter za sortiranje po parametrima
 */
     

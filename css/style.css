@@ -3,6 +3,7 @@ html {
     background-image: url("../images/biblioteka.jpg");
     background-repeat: cover;
     box-sizing: border-box;
+    font-family: 'Varela round', sans-serif;
     
 }
 
@@ -30,16 +31,68 @@ body {
 .modal-content{
     position: relative;
     width: 50rem;
-    height: 40rem;
     background-color: white;
-    border-radius: 0.8rem;
-    text-align: center;
-    padding: 3rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border-radius: 0.8rem;  
+    padding: 5rem;
+    
+}
 
+.modal-content h1{
+    font-size: 2rem;
+    font-family: 'Varela round', sans-serif;
+
+}
+
+.modal-content input{
+    width: 92%;
+    font-size: 1.7rem;
+    font-family: 'Varela round', sans-serif;
+    padding: 1rem 1.5rem;
+    margin: 1rem auto;
+    background-color: rgb(214, 220, 238);
+    border: none;
+    border-radius: 3px;
+}
+.modal-content select{
+    width: 98%;
+    font-size: 1.7rem;
+    font-family: 'Varela round', sans-serif;
+    padding: 1rem 1.5rem;
+    margin: 1rem auto ;
+    background-color: rgb(214, 220, 238);
+    border: none;
+    border-radius: 3px;
+}
+
+.modal-content button{
+    float: right;
+    padding: 1rem 2rem 1rem 0.8rem;
+    margin: 1rem 1rem;
+    font-size: 1.5rem;
+    font-family: 'Varela round', sans-serif;
+    color: white;
+    background-color: #33c55f;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    
+}
+.modal-content button::before{
+    content: "+ ";
+    opacity: 0;
+    transition: 0.5s;
+}
+.modal-content button:hover::before{
+    opacity: 1;
+    padding-left: 0.8rem;
+}
+
+#cancel{
+    background-color: #c21f1f;
+}
+#cancel::before{
+    content: "x ";
 }
 
 .close{
@@ -67,7 +120,7 @@ header {
     background-color: rgba(39, 131, 236, 0.4);
 }
 
-header button {
+.buttonNewbook {
     position: absolute;
     bottom: 1.5rem;
     left: 4rem;
@@ -82,13 +135,13 @@ header button {
     outline: none;
 }
 
-header button::before {
+.buttonNewbook::before {
     content: "+ ";
     transition: 0.5s;
     opacity: 0;
 }
 
-header button:hover::before {
+.buttonNewbook:hover::before {
     padding-left: 1rem;
     opacity: 1;
 }
