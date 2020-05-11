@@ -12,7 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,17 +22,19 @@
             <div class="close">+</div>
             <h1 id="modal-title">New Book</h1>  
             <form action="" id="modal-form">
-              <input type="text" name="title" id="title" placeholder="Title" required>
+              <input type="text" name="title" id="title" placeholder="Book title" required>
               <input type="text" name="author" id="author" placeholder="Author name" required>
-              <input type="number" name="pages" id="pages" min=1 placeholder="Number of pages" required>
+              <input type="text" name="genre" id="genre" placeholder="Book genre" >
+              <input type="number" name="pages" id="pages" min=1  placeholder="Number of pages" required>
               <select name="read" id="read">
-                <option value="yes">Already read</option>
-                <option value="no" selected>Not read yet</option>
+                <option value=true>Already read</option>
+                <option value=false selected>Not read yet</option>
               </select>
               
-              <button type="submit">Add book</button>
-              <button id="cancel">Cancel</button>
+              <button type="submit" id="addBook">Add book</button>
+              
             </form>
+            <button id="cancel">Cancel</button>
         </div> 
     </div>
     <header>

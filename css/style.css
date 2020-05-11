@@ -25,7 +25,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*display: none;*/
+    display: none;
 }
 
 .modal-content{
@@ -33,14 +33,12 @@ body {
     width: 50rem;
     background-color: white;
     border-radius: 0.8rem;  
-    padding: 5rem;
-    
+    padding: 4rem;
 }
 
 .modal-content h1{
     font-size: 2rem;
     font-family: 'Varela round', sans-serif;
-
 }
 
 .modal-content input{
@@ -50,24 +48,30 @@ body {
     padding: 1rem 1.5rem;
     margin: 1rem auto;
     background-color: rgb(214, 220, 238);
+    color: rgb(28, 79, 235);
     border: none;
     border-radius: 3px;
 }
+.modal-content input::placeholder{
+    color: rgb(90, 111, 172);
+}
+
 .modal-content select{
     width: 98%;
     font-size: 1.7rem;
     font-family: 'Varela round', sans-serif;
     padding: 1rem 1.5rem;
-    margin: 1rem auto ;
+    margin: 1rem auto;
     background-color: rgb(214, 220, 238);
     border: none;
     border-radius: 3px;
+    color: rgb(90, 111, 172);
 }
 
 .modal-content button{
     float: right;
     padding: 1rem 2rem 1rem 0.8rem;
-    margin: 1rem 1rem;
+    margin: 2rem 1rem 0rem;
     font-size: 1.5rem;
     font-family: 'Varela round', sans-serif;
     color: white;
@@ -152,6 +156,8 @@ header h1 {
     color: whitesmoke;
 }
 
+
+/*--------knjige---------*/
 #books {
     display: grid;
     grid-template-columns: repeat(5, minmax(20rem, 1fr));
@@ -161,12 +167,20 @@ header h1 {
 .book {
     margin: 3rem 2rem;
     padding: 2rem;
-    background-color: rgb(10, 59, 59);
+   /* background-color: rgba(82, 5, 5, 0.8);*/
+    background-color: rgba(7, 17, 59, 0.8);
     border-radius: 10px;
-}
-
-.book {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-family: 'Loto', sans-serif;
     color: rgb(247, 225, 225);
 }
+.book p{
+    margin: 2rem auto;
+}
+.title{
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+}
+/*.read{
+    color: green;
+}*/
