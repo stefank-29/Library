@@ -95,10 +95,8 @@ function removeBooks(){
 }
 function render(){
     removeBooks();
-    let x = 0;
+    let index = 0;  // koji je indeks knjige u biblioteci
     myLibrary.forEach(book => {
-        console.log(++x); // dodati u dataset index pa povecati za jedan
-        
         const card = document.createElement('div');
         card.classList.add("book");
         const title = document.createElement('p');
@@ -121,6 +119,8 @@ function render(){
         trash.classList.add("bin");
         trash.setAttribute('src', "images/trash.png")
         trash.setAttribute('alt', "trash bin icon");
+        trash.setAttribute('data-index', index++);
+        trash.addEventListener('click', deleteBook); // event listener dinamicki za brisanje
 
         card.appendChild(title);
         card.appendChild(author);
