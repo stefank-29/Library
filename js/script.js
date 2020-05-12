@@ -44,6 +44,7 @@ addBookToLibrary(anaKarenjina);*/
     TODO Izgled kartice za knjigu
     TODO 4) kantica za brisanje knjiga
     TODO 5) button za selektovanje dal je knjiga procitana
+    TODO * animations
     TODO * filter za sortiranje po parametrima
     TODO * sortitanje po nazivu
 */
