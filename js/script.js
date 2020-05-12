@@ -28,7 +28,6 @@ Book.prototype.info = function(){
 /*const theHobbit = new Book('adsa', 'dasdasd', 'dsadasd',213, true);
 console.log(theHobbit.info());*/
 /*  
-    TODO 5) button za selektovanje dal je knjiga procitana
     TODO * animations
     TODO * ulepsati
     TODO * filter za sortiranje po parametrima
