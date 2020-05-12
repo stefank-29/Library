@@ -24,27 +24,13 @@ function Book(title, author, genre,  pages, read){
 Book.prototype.info = function(){
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "already read" : "not read yet"}`;
 }
-const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", "Fantasy", 295, false);
-const theHobbit2 = new Book("The Hobbit", "J.R.R. Tolkien", "Fantasy", 295, false);
-const theHobbit3 = new Book("The Hobbit", "J.R.R. Tolkien",  "Fantasy",295, false);
-const anaKarenjina = new Book("Ana Karenjina", "Lav Tolstoj", "Fantasy", 745, true);
-
-//console.log(theHobbit.info());
-/*addBookToLibrary(theHobbit);
-addBookToLibrary(theHobbit2);
-addBookToLibrary(theHobbit3);
-addBookToLibrary(anaKarenjina);
-addBookToLibrary(theHobbit);
-addBookToLibrary(anaKarenjina);*/
-//render();
-//console.table(myLibrary);
 
 
 /*  
-    TODO Izgled kartice za knjigu
     TODO 4) kantica za brisanje knjiga
     TODO 5) button za selektovanje dal je knjiga procitana
     TODO * animations
+    TODO * ulepsati
     TODO * filter za sortiranje po parametrima
     TODO * sortitanje po nazivu
 */
@@ -106,11 +92,13 @@ function removeBooks(){
         booksGrid.removeChild(child);
         child = booksGrid.lastElementChild;
     }
-
 }
 function render(){
     removeBooks();
+    let x = 0;
     myLibrary.forEach(book => {
+        console.log(++x); // dodati u dataset index pa povecati za jedan
+        
         const card = document.createElement('div');
         card.classList.add("book");
         const title = document.createElement('p');
@@ -121,20 +109,25 @@ function render(){
         author.textContent = `Author: ${book.author}`;
         const genre = document.createElement('p');
         genre.classList.add("genre");
-        genre.textContent = `Genre: ${book.genre == '' ? "Unknown" : book.genre}`;
+        genre.textContent = `Genres: ${book.genre == '' ? "Unknown" : book.genre}`;
         const pages = document.createElement('p');
         pages.classList.add("pages");
         pages.textContent = `Pages: ${book.pages}`;
         const read = document.createElement('p');
         read.classList.add("read");
         read.textContent = `Read: ${book.read === "true" ? "Already read" : "Not read yet"}`;
-        book.read === "true" ? read.style.color = 'green' : read.style.color = 'red'; // ako je procitana onda zelena ako ne onda crvena
-        
+        book.read === "true" ? read.style.color = '#33c55f' : read.style.color = 'red'; // ako je procitana onda zelena ako ne onda crvena
+        const trash = document.createElement('img');
+        trash.classList.add("bin");
+        trash.setAttribute('src', "images/trash.png")
+        trash.setAttribute('alt', "trash bin icon");
+
         card.appendChild(title);
         card.appendChild(author);
         card.appendChild(genre);
         card.appendChild(pages);
         card.appendChild(read);
+        card.appendChild(trash);
         booksGrid.appendChild(card);   
     });
 
@@ -151,6 +144,7 @@ function loadBooks(){
     render();
 
 }
-
 addBook.addEventListener('click', addBookToLibrary);
 window.onload = loadBooks;
+
+
