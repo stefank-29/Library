@@ -25,9 +25,9 @@ Book.prototype.info = function(){
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "already read" : "not read yet"}`;
 }
 
-
+/*const theHobbit = new Book('adsa', 'dasdasd', 'dsadasd',213, true);
+console.log(theHobbit.info());*/
 /*  
-    TODO 4) kantica za brisanje knjiga
     TODO 5) button za selektovanje dal je knjiga procitana
     TODO * animations
     TODO * ulepsati
@@ -115,6 +115,8 @@ function render(){
         read.classList.add("read");
         read.textContent = `Read: ${book.read === "true" ? "Already read" : "Not read yet"}`;
         book.read === "true" ? read.style.color = '#33c55f' : read.style.color = 'red'; // ako je procitana onda zelena ako ne onda crvena
+        read.setAttribute('data-index', index);
+        read.addEventListener('click', toggleStatus);
         const trash = document.createElement('img');
         trash.classList.add("bin");
         trash.setAttribute('src', "images/trash.png")

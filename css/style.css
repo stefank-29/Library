@@ -185,6 +185,11 @@ header h1 {
     text-align: center;
 }
 
+.read{
+    cursor: pointer;
+
+}
+
 .bin{
     position: absolute;
     bottom: 1.5rem;
