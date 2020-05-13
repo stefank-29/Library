@@ -4,7 +4,6 @@ html {
     background-repeat: cover;
     box-sizing: border-box;
     font-family: 'Varela round', sans-serif;
-    
 }
 
 body {
@@ -15,6 +14,7 @@ body {
 }
 
 /*------- popup modal -----*/
+
 .bg-modal {
     width: 100vw;
     height: 100vh;
@@ -28,21 +28,21 @@ body {
     display: none;
 }
 
-.modal-content{
+.modal-content {
     position: relative;
     width: 50rem;
     background-color: white;
-    border-radius: 0.8rem;  
+    border-radius: 0.8rem;
     padding: 4rem;
     animation: popupA 0.3s linear 1;
 }
 
-.modal-content h1{
+.modal-content h1 {
     font-size: 2rem;
     font-family: 'Varela round', sans-serif;
 }
 
-.modal-content input{
+.modal-content input {
     width: 92%;
     font-size: 1.7rem;
     font-family: 'Varela round', sans-serif;
@@ -53,11 +53,12 @@ body {
     border: none;
     border-radius: 3px;
 }
-.modal-content input::placeholder{
+
+.modal-content input::placeholder {
     color: rgb(90, 111, 172);
 }
 
-.modal-content select{
+.modal-content select {
     width: 98%;
     font-size: 1.7rem;
     font-family: 'Varela round', sans-serif;
@@ -69,7 +70,7 @@ body {
     color: rgb(90, 111, 172);
 }
 
-.modal-content button{
+.modal-content button {
     float: right;
     padding: 1rem 2rem 1rem 0.8rem;
     margin: 2rem 1rem 0rem;
@@ -81,39 +82,41 @@ body {
     cursor: pointer;
     border: none;
     outline: none;
-    
 }
-.modal-content button::before{
+
+.modal-content button::before {
     content: "+ ";
     opacity: 0;
     transition: 0.5s;
 }
-.modal-content button:hover::before{
+
+.modal-content button:hover::before {
     opacity: 1;
     padding-left: 0.8rem;
 }
 
-#cancel{
+#cancel {
     background-color: #c21f1f;
 }
-#cancel::before{
+
+#cancel::before {
     content: "x ";
 }
 
-.close{
+.close {
     position: absolute;
     top: 0;
     right: 1rem;
-    font-size: 4rem;  
+    font-size: 4rem;
     font-weight: 800;
     transform: rotate(45deg);
-    cursor: pointer;  
+    cursor: pointer;
     outline: none;
     user-select: none;
 }
 
-
 /*------- header--------*/
+
 header {
     position: relative;
     display: flex;
@@ -157,71 +160,106 @@ header h1 {
     color: whitesmoke;
 }
 
-
 /*--------knjige---------*/
+
 #books {
     display: grid;
     grid-template-columns: repeat(5, minmax(20rem, 1fr));
-    margin: 3rem 3rem;
+    margin: 3rem 3rem 0 3rem;
+    padding-bottom: 3.5rem;
 }
 
 .book {
     position: relative;
     margin: 3rem 2rem;
     padding: 2rem;
-   /* background-color: rgba(82, 5, 5, 0.8);*/
+    /* background-color: rgba(82, 5, 5, 0.8);*/
     background-color: rgba(7, 17, 59, 0.8);
     border-radius: 10px;
     font-size: 2rem;
     font-family: 'Loto', sans-serif;
     color: rgb(247, 225, 225);
 }
-.book p{
+
+.book p {
     margin: 1.5rem auto;
 }
-.title{
+
+.title {
     font-size: 3rem;
     font-family: 'Dancing Script', cursive;
     text-shadow: 0 0 1rem red;
     text-align: center;
 }
 
-.read{
+.read {
     cursor: pointer;
 }
 
-.bin{
+.bin {
     position: absolute;
     bottom: 1.5rem;
     right: 2rem;
     width: 2.4rem;
     cursor: pointer;
-   
 }
-.bin:hover{
+
+.bin:hover {
     animation: rotation 0.5s linear 1;
 }
 
-@keyframes rotation{
-    0%{
+@keyframes rotation {
+    0% {
         transform: rotate(0);
     }
-    25%{
+    25% {
         transform: rotate(10deg);
     }
-    75%{
+    75% {
         transform: rotate(-10deg);
     }
-    100%{
+    100% {
         transform: rotate(0);
     }
 }
 
-@keyframes popupA{
-    0%{
+@keyframes popupA {
+    0% {
         transform: scale(0);
     }
-    100%{
+    100% {
         transform: scale(1)
     }
+}
+
+/*-------footer---------*/
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+footer div {
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    background-color: rgba(236, 81, 81, 0.3);
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: rgb(28, 64, 184);
 }

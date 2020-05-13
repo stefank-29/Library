@@ -28,7 +28,6 @@ Book.prototype.info = function(){
 /*const theHobbit = new Book('adsa', 'dasdasd', 'dsadasd',213, true);
 console.log(theHobbit.info());*/
 /*  
-    TODO * ulepsati
     TODO * footer
     TODO * filter za sortiranje po parametrima
     TODO * sortitanje po nazivu
