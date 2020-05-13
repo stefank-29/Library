@@ -233,12 +233,10 @@ header h1 {
 }
 
 /*-------footer---------*/
-
 .page-container {
     position: relative;
     min-height: 100vh;
 }
-
 footer div {
     position: absolute;
     box-sizing: border-box;
@@ -251,15 +249,27 @@ footer div {
     font-family: sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 600;
-    background-color: rgba(236, 81, 81, 0.3);
+    background-color: rgba(39, 131, 236, 0.3);
 }
-
 footer a {
     text-decoration: none;
     color: white;
 }
-
 footer a:hover {
     text-decoration: underline;
     color: rgb(28, 64, 184);
+}
+
+#sort{
+    position: absolute;
+    bottom: 1.5rem;
+    left: 18rem;
+    font-size: 1.5rem;
+    font-family: 'Varela round', sans-serif;
+    padding: 1rem 1.5rem;
+    background-color: rgb(214, 220, 238);
+    color: rgb(90, 111, 172);
+    border: none;
+    border-radius: 3px;
+    outline: none;  
 }

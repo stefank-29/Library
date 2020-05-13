@@ -19,3 +19,38 @@ function toggleStatus(){
     render();
     
 }
+
+const sortSelect = document.querySelector("#sort");
+sortSelect.addEventListener('change', sortBooks);
+
+function sortBooks(){
+    //let sortedBooks;
+    if(this.value == 'asc'){
+        myLibrary = myLibrary.sort((a, b) =>{
+            return a.title > b.title ? 1 : -1;
+        });  
+    }else if(this.value == 'desc'){
+        myLibrary = myLibrary.sort((a, b) => {
+            return a.title > b.title ? -1 : 1;
+        })
+    }else if(this.value == 'read-first'){
+        myLibrary = myLibrary.sort((a, b) =>{
+            return a.read == 'true' && b.read == 'false' ? -1 : 1;
+        });  
+    }else if(this.value == 'unread-first'){
+        myLibrary = myLibrary.sort((a, b) =>{
+            return a.read == 'true' && b.read == 'false' ? 1 : -1;
+        });  
+    }
+    render();
+    
+}
+
+/*
+
+if(this.value == 'asc'){
+        myLibrary = myLibrary.sort((a, b) =>{
+            return a.title > b.title ? 1 : -1;
+        });  
+    }
+*/
