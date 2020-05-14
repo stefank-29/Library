@@ -25,12 +25,6 @@ Book.prototype.info = function(){
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "already read" : "not read yet"}`;
 }
 
-/*const theHobbit = new Book('adsa', 'dasdasd', 'dsadasd',213, true);
-console.log(theHobbit.info());*/
-/*  
-    TODO * live demo za github
-    TODO * okaciti na Odin
-*/
     
 newBook.addEventListener('click', showPopup);
 close.addEventListener('click', closePopup);
