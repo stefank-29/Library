@@ -279,16 +279,16 @@ footer a:hover {
 }
 
 #onloadText{
-    z-index: 2;
     position: absolute;
-    top: 27%;
+    top: 28%;
     left: 0;
     right: 0;
     box-sizing: border-box;
     text-align: center;
     font-size: 7rem;
     font-family: 'Dancing Script', cursive;
-    color: rgb(230, 199, 199);
-    
+    color: rgb(249, 217, 217);
+    text-shadow: 0 0 0.7rem rgb(240, 170, 170);
+    user-select: none;
 
 }
