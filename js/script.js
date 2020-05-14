@@ -130,7 +130,7 @@ function render(){
         booksGrid.appendChild(card);   
     });
     if(Array.isArray(myLibrary) && myLibrary.length){ // ako biblioteka nije prazna
-        //welcomeText.style.display = 'none';
+        welcomeText.style.display = 'none';
     }else{
         welcomeText.style.display = '';
     }
