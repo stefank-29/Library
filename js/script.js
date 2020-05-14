@@ -129,7 +129,7 @@ function render(){
         card.appendChild(trash);
         booksGrid.appendChild(card);   
     });
-    if(Array.isArray(myLibrary)){
+    if(Array.isArray(myLibrary) && myLibrary.length){ // ako biblioteka nije prazna
         welcomeText.style.display = 'none';
     }else{
         welcomeText.style.display = '';
@@ -139,7 +139,7 @@ function render(){
 function loadBooks(){
     let retrivedData = localStorage.getItem("MyLibrary");
     myLibrary = JSON.parse(retrivedData);
-    if (!Array.isArray(myLibrary)){ // provera dal je prazan niz
+    if (!(Array.isArray(myLibrary) && myLibrary.length)){ // provera dal je prazan niz
         myLibrary = [];
         return;
     }
