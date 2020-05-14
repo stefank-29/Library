@@ -1,9 +1,9 @@
 html {
-    font-size: 10px;
-    background-image: url("../images/biblioteka.jpg");
-    background-repeat: cover;
-    box-sizing: border-box;
+    font-size: 9.5px;
     font-family: 'Varela round', sans-serif;
+    background-image: url("../images/biblioteka.jpg");
+    background-size: cover;
+    box-sizing: border-box;
 }
 
 body {
@@ -156,8 +156,10 @@ header {
 
 header h1 {
     font-size: 7rem;
+    margin: 4rem 0 6rem;
     font-family: 'Varela round', sans-serif;
     color: whitesmoke;
+    cursor: pointer;
 }
 
 /*--------knjige---------*/
@@ -171,7 +173,7 @@ header h1 {
 
 .book {
     position: relative;
-    margin: 3rem 2rem;
+    margin: 2rem 2rem;
     padding: 2rem;
     /* background-color: rgba(82, 5, 5, 0.8);*/
     background-color: rgba(7, 17, 59, 0.8);
@@ -260,16 +262,33 @@ footer a:hover {
     color: rgb(28, 64, 184);
 }
 
+
+/*-------sort select----------*/
 #sort{
     position: absolute;
     bottom: 1.5rem;
     left: 18rem;
     font-size: 1.5rem;
     font-family: 'Varela round', sans-serif;
-    padding: 1rem 1.5rem;
+    padding: 0.9rem 1.5rem;
     background-color: rgb(214, 220, 238);
     color: rgb(90, 111, 172);
     border: none;
     border-radius: 3px;
     outline: none;  
+}
+
+#onloadText{
+    z-index: 2;
+    position: absolute;
+    top: 27%;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 7rem;
+    font-family: 'Dancing Script', cursive;
+    color: rgb(230, 199, 199);
+    
+
 }

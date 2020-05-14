@@ -28,8 +28,8 @@ Book.prototype.info = function(){
 /*const theHobbit = new Book('adsa', 'dasdasd', 'dsadasd',213, true);
 console.log(theHobbit.info());*/
 /*  
-    
     TODO * live demo za github
+    TODO * okaciti na Odin
 */
     
 newBook.addEventListener('click', showPopup);
@@ -129,7 +129,11 @@ function render(){
         card.appendChild(trash);
         booksGrid.appendChild(card);   
     });
-
+    if(Array.isArray(myLibrary)){
+        welcomeText.style.display = 'none';
+    }else{
+        welcomeText.style.display = '';
+    }
 }
 
 function loadBooks(){

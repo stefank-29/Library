@@ -46,11 +46,9 @@ function sortBooks(){
     
 }
 
-/*
+const hTitle = document.querySelector("#headerTitle");
+hTitle.addEventListener('click', () => {
+    location.reload();
+})
 
-if(this.value == 'asc'){
-        myLibrary = myLibrary.sort((a, b) =>{
-            return a.title > b.title ? 1 : -1;
-        });  
-    }
-*/
+const welcomeText = document.querySelector("#onloadText");
